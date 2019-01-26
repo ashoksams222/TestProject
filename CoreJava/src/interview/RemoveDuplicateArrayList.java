@@ -9,21 +9,19 @@ public class RemoveDuplicateArrayList {
 	public static void main(String[] args) 
     { 
         // input list with duplicates 
-        List<Integer> list = new ArrayList<>( 
+        ArrayList<Integer> al = new ArrayList<>( 
             Arrays.asList(1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5)); 
             // Print the Arraylist 
         System.out.println("ArrayList with duplicates: "
-                           + list); 
+                           + al); 
   
         // Construct a new list from the set constucted from elements 
         // of the original list 
-        List<Integer> newList = list.stream() 
-                                      .distinct() 
-                                      .collect(Collectors.toList()); 
+        ArrayList<Integer> al1 = (ArrayList<Integer>) al.stream() .distinct() .collect(Collectors.toList()); 
   
         // Print the ArrayList with duplicates removed 
         System.out.println("ArrayList with duplicates removed: "
-                           + newList); 
+                           + al1); 
     } 
 
 }
